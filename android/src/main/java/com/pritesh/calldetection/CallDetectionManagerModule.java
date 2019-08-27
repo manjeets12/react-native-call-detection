@@ -114,7 +114,7 @@ public class CallDetectionManagerModule
                 if(wasAppInOffHook == true) { // if there was an ongoing call and the call state switches to idle, the call must have gotten disconnected
                     jsModule.callStateUpdated("Disconnected", phoneNumber);
                 } else if(wasAppInRinging == true) { // if the phone was ringing but there was no actual ongoing call, it must have gotten missed
-                    jsModule.callStateUpdated("Missed", null);
+                    jsModule.callStateUpdated("Missed", phoneNumber);
                 }
 
                 //reset device state
